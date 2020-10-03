@@ -1,5 +1,7 @@
 package view;
 
+import controller.Berrie;
+import controller.Berrie2;
 import controller.RedHood;
 import controller.Scenario;
 import controller.Wolf;
@@ -23,6 +25,8 @@ public class Main extends PApplet {
 	Scenario scen;
 	RedHood red;
 	Wolf wolf;
+	Berrie berry;
+	Berrie2 berry2;
 	
 
 	
@@ -37,6 +41,8 @@ public class Main extends PApplet {
 		scen = new Scenario(this); 
 		red = new RedHood(150, 284, 0, this);
 		wolf = new Wolf(550, 350, 0, this);
+		berry = new Berrie (627,380,0,this);
+		berry2 = new Berrie2 (40,370,0,this);
 		
 	}
 	
@@ -51,6 +57,8 @@ public class Main extends PApplet {
 			scen.paint();
 			red.paint();
 			wolf.pintar();
+			berry.paint();
+			berry2.paint();
 			
 		}
 		

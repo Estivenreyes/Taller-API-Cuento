@@ -11,19 +11,14 @@ public class Object {
 	int dirY;
 	
 
-	
-	
 	public Object (float posX, float posY, int dirX, PApplet app) {
 		
 		this.app = app;
 		this.posX = posX;
 		this.posY = posY;
 		this.dirX = dirX;
-		
-		
+			
 	}
-	
-	
 
 }
  

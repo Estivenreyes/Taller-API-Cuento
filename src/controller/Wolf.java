@@ -11,7 +11,7 @@ public class Wolf extends Object {
 
 	public Wolf(float posX, float posY, int dirX, PApplet app) {
 		super(posX, posY, dirX, app);
-		index = 0;
+		index = 1;
 		this.wolf = app.loadImage("./data/wolf.png");
 		this.wolfeed = app.loadImage("./data/wolfeed.png");
 
@@ -26,8 +26,8 @@ public class Wolf extends Object {
 
 		case 1:
 			boolean over;
-			if(app.mouseX > posX && app.mouseX < posX + 203
-					&& app.mouseY > posY && app.mouseY < posY + 332) {
+			if(app.mouseX > posX && app.mouseX < posX + 311
+					&& app.mouseY > posY && app.mouseY < posY + 311) {
 				over = true;
 			} else {
 				over = false;
