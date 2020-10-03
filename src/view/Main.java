@@ -1,9 +1,9 @@
 package view;
+
 import processing.core.PApplet;
 import processing.core.PImage;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+
+
 
 public class Main extends PApplet {
 
@@ -12,7 +12,7 @@ public class Main extends PApplet {
 	
 	
 	public static void main(String[] args) {
-		PApplet.main("Main");
+		PApplet.main(Main.class.getName());
 		
 	}
 	

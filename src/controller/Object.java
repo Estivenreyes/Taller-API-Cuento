@@ -1,20 +1,29 @@
 package controller;
-import processing.core.PImage;
+import processing.core.PApplet;
+	
 
 public class Object {
 	
-	PImage basket;
-	PImage hunter;
-	PImage redHood1;
-	PImage redHoodbasket;
-	PImage redHoodbasket1;
-	PImage redHoodbasket2;
-	PImage redHoodbasket3;
+	protected PApplet app;
+	float posX;
+	float posY;
+	int dirX;
+	int dirY;
 	
-	
-	public static void main(String[] args) {
 
+	
+	
+	public Object (float posX, float posY, int dirX, PApplet app) {
+		
+		this.app = app;
+		this.posX = posX;
+		this.posY = posY;
+		this.dirX = dirX;
+		
+		
 	}
+	
+	
 
 }
  
