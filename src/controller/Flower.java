@@ -7,13 +7,14 @@ public class Flower extends Object{
 	
 	private int index;
 	PImage Flower;
-	PImage Flowers;
+	PImage Flowerfeed;
 	
 	public Flower(float posX, float posY, int dirX, PApplet app) {
 		super(posX, posY, dirX, app);
 		
+		index = 1;
 		this.Flower = app.loadImage("./data/Flower.png");
-		this.Flowers = app.loadImage("./data/Flowers.png");
+		this.Flowerfeed = app.loadImage("./data/Flowerfeed.png");
 		
 	}
 	
@@ -34,7 +35,7 @@ public class Flower extends Object{
 			}
 			
 			if(over) {
-				app.image(this.Flowers,posX,posY);
+				app.image(this.Flowerfeed,posX,posY);
 			}else {
 				app.image(this.Flower,posX,posY);
 			}

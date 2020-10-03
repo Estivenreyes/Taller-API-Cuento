@@ -3,6 +3,7 @@ package view;
 import controller.Basket;
 import controller.Berrie;
 import controller.Berrie2;
+import controller.Flower;
 import controller.RedHood;
 import controller.Scenario;
 import controller.Wolf;
@@ -15,7 +16,7 @@ public class Main extends PApplet {
 
 	int screen;
 	PImage principalScreen;
-	
+	PImage Flower;
 	
 	public static void main(String[] args) {
 		PApplet.main(Main.class.getName());
@@ -29,6 +30,7 @@ public class Main extends PApplet {
 	Berrie berry;
 	Berrie2 berry2;
 	Basket bask;
+	Flower flow;
 	
 
 	
@@ -40,12 +42,14 @@ public class Main extends PApplet {
 		arrayStory = loadStrings("../resources/CaperucitaRoja.txt");
 		System.out.println(arrayStory[0]);
 		principalScreen = loadImage ("./data/principalScreen.png");
+		Flower = loadImage ("./data/Flower.png");
 		scen = new Scenario(this); 
 		red = new RedHood(150, 284, 0, this);
 		wolf = new Wolf(550, 350, 0, this);
 		berry = new Berrie (627,380,0,this);
 		berry2 = new Berrie2 (402,370,0,this);
 		bask = new Basket (409, 543, 0, this);
+		flow = new Flower (326,387,0,this);
 		
 	}
 	
@@ -57,13 +61,16 @@ public class Main extends PApplet {
 		}
 		
 		if(screen == 1) {
+			
 			scen.paint();
 			red.paint();
 			wolf.pintar();
 			berry.paint();
 			berry2.paint();
 			bask.paint();
-			
+			flow.paint();
+			image(Flower,8,497);
+			image(Flower,646,497);
 		}
 		
 		
