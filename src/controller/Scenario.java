@@ -19,7 +19,7 @@ public class Scenario {
 	}
 	
 	public void paint () {
-		app.image (stage,posX,posY);
+		app.image (stage,-1999,posY);
 
 	}
 	

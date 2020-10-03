@@ -7,9 +7,7 @@ public class Berrie extends Object{
 	
 	private int index;
 	PImage berrie1;
-	//PImage berrie2;
 	PImage berriefeed1;
-	//PImage berriefeed2;
 	
 	
 	public Berrie(float posX, float posY, int dirX, PApplet app) {
@@ -17,12 +15,7 @@ public class Berrie extends Object{
 		
 		index = 1;
 		this.berrie1 = app.loadImage("./data/berrie1.png");
-		//this.berrie2 = app.loadImage("./data/berrie2.png");
 		this.berriefeed1 = app.loadImage("./data/berriefeed1.png");
-		//this.berriefeed2 = app.loadImage("./data/berrie2.png");
-
-
-		
 		
 	}
 	
@@ -30,7 +23,7 @@ public class Berrie extends Object{
 		switch(index) {
 		case 0:
 			app.image(this.berrie1,posX,posY);
-			//app.image(this.berrie2,posX,posY);
+		
 			
 		break;
 
@@ -45,10 +38,8 @@ public class Berrie extends Object{
 			
 			if(over) {
 				app.image(this.berriefeed1,posX,posY);
-				//app.image(this.berriefeed2,posX,posY);
 			}else {
 				app.image(this.berrie1,posX,posY);
-				//app.image(this.berrie2,posX,posY);
 			}
 	}
 	}

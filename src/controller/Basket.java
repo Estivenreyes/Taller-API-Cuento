@@ -3,29 +3,24 @@ package controller;
 import processing.core.PApplet;
 import processing.core.PImage;
 
-public class Berrie2 extends Object{
+public class Basket extends Object{
 	
 	private int index;
-	PImage berrie2;
-	PImage berriefeed2;
-	
-	
-	public Berrie2(float posX, float posY, int dirX, PApplet app) {
+	PImage basket;
+	PImage basketfeed;
+
+	public Basket(float posX, float posY, int dirX, PApplet app) {
 		super(posX, posY, dirX, app);
 		
 		index = 1;
-		this.berrie2 = app.loadImage("./data/berrie2.png");
-		this.berriefeed2 = app.loadImage("./data/berriefeed2.png");
-
-
-		
-		
+		this.basket = app.loadImage("./data/basket.png");
+		this.basketfeed = app.loadImage("./data/basketfeed.png");
 	}
 	
 	public void paint () {
 		switch(index) {
 		case 0:
-			app.image(this.berrie2,posX,posY);
+			app.image(this.basket,posX,posY);
 			
 		break;
 
@@ -39,12 +34,12 @@ public class Berrie2 extends Object{
 			}
 			
 			if(over) {
-				app.image(this.berriefeed2,posX,posY);
+				app.image(this.basketfeed,posX,posY);
 			}else {
-				app.image(this.berrie2,posX,posY);
+				app.image(this.basket,posX,posY);
 			}
+		}
+		
 	}
-	}
-
 
 }
