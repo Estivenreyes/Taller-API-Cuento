@@ -9,14 +9,17 @@ public class Scenario {
 	int posY;
 	float parallax;
 	PImage stage;
+	PImage scenario1;
 	
-	public Scenario (float parallax, PApplet app) {
+	public Scenario (PApplet app) {
 		this.app = app;
 		this.stage = app.loadImage("./data/stage.png");
+		this.scenario1 = app.loadImage("./data/scenario1.png");
 		
 	}
 	
-	public void parallaxefect () {
+	public void paint () {
+		app.image (stage,posX,posY);
 
 	}
 	

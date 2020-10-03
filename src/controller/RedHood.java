@@ -15,7 +15,17 @@ public class RedHood extends Object{
 	
 	public RedHood(float posX, float posY, int dirX, PApplet app) {
 		super(posX, posY, dirX, app);
+		
+		this.redHood1 = app.loadImage("./data/redHood1.png");
 	
+	}
+	
+	public void paint() {
+		app.image(this.redHood1,174,299);
+	} 
+	
+	public void move () {
+		
 	}
 
 }
