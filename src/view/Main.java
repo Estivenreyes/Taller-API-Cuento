@@ -2,6 +2,7 @@ package view;
 
 import controller.RedHood;
 import controller.Scenario;
+import controller.Wolf;
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -21,6 +22,7 @@ public class Main extends PApplet {
 	String [] arrayStory;
 	Scenario scen;
 	RedHood red;
+	Wolf wolf;
 	
 
 	
@@ -33,7 +35,8 @@ public class Main extends PApplet {
 		System.out.println(arrayStory[0]);
 		principalScreen = loadImage ("./data/principalScreen.png");
 		scen = new Scenario(this); 
-		//red = new RedHood(this);
+		red = new RedHood(150, 284, 0, this);
+		wolf = new Wolf(550, 350, 0, this);
 		
 	}
 	
@@ -42,12 +45,12 @@ public class Main extends PApplet {
 		
 		if(screen == 0) {
 			image(principalScreen,0,0);
-			editStory();
 		}
 		
 		if(screen == 1) {
 			scen.paint();
-			//red.paint();
+			red.paint();
+			wolf.pintar();
 			
 		}
 		
@@ -75,8 +78,9 @@ public class Main extends PApplet {
 			while(arrayStory[i].contains("avellanas")) {
 				arrayStory[i] = arrayStory[i].replace("avellanas", "BERRIES");
 			}
-	
 		}
+		
+		saveStrings("nouns.txt", arrayStory);
 	}
 	
 	public void mouseClicked() {
@@ -84,6 +88,7 @@ public class Main extends PApplet {
 		case 0:
 			if (mouseX > 749 && mouseX < 841 && mouseY > 581 && mouseY < 652) {
 				screen = 1;
+				editStory();
 			}
 		
 		break;
